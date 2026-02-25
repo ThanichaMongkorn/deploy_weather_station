@@ -1,7 +1,7 @@
 name: weather-station
 services:
   backend:
-    image: nongpumpui/weather-backend:version1.0
+    image: nongpumpui/weather-backend:latest
     container_name: backend_service
     restart: unless-stopped
     depends_on:
@@ -14,7 +14,7 @@ services:
       - weather-station_network
 
   frontend:
-    image: nongpumpui/weather-frontend:version1.0
+    image: nongpumpui/weather-frontend:latest
     container_name: frontend_service
     restart: unless-stopped
     networks:
